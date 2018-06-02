@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Memo.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: "Segoe WPC", "Segoe UI", "SFUIText-Light", "HelveticaNeue-Light", sans-serif, "Droid Sans Fallback";
+	font-size: 14px;
+	padding: 0 12px;
+	line-height: 22px;
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	color: #4080D0;
+	text-decoration: none;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+h1 code,
+h2 code,
+h3 code,
+h4 code,
+h5 code,
+h6 code {
+	font-size: inherit;
+	line-height: auto;
+}
+
+a:hover {
+	color: #4080D0;
+	text-decoration: underline;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left: 5px solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 14px;
+	line-height: 19px;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+.mac code {
+	font-size: 12px;
+	line-height: 18px;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+/** Theming */
+
+.vscode-light,
+.vscode-light pre code {
+	color: rgb(30, 30, 30);
+}
+
+.vscode-dark,
+.vscode-dark pre code {
+	color: #DDD;
+}
+
+.vscode-high-contrast,
+.vscode-high-contrast pre code {
+	color: white;
+}
+
+.vscode-light code {
+	color: #A31515;
+}
+
+.vscode-dark code {
+	color: #D7BA7D;
+}
+
+.vscode-light pre:not(.hljs),
+.vscode-light code > div {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre:not(.hljs),
+.vscode-dark code > div {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre:not(.hljs),
+.vscode-high-contrast code > div {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+.vscode-light blockquote,
+.vscode-dark blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.vscode-high-contrast blockquote {
+	background: transparent;
+	border-color: #fff;
+}
+</style>
+
+<style>
+/* Base16 Atelier Dune Light - Theme */
+/* by Bram de Haan (http://atelierbram.github.io/syntax-highlighting/atelier-schemes/dune) */
+/* Original Base16 color scheme by Chris Kempson (https://github.com/chriskempson/base16) */
+
+/* Atelier-Dune Comment */
+.hljs-comment,
+.hljs-quote {
+  color: #7d7a68;
+}
+
+/* Atelier-Dune Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-attribute,
+.hljs-tag,
+.hljs-name,
+.hljs-regexp,
+.hljs-link,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class {
+  color: #d73737;
+}
+
+/* Atelier-Dune Orange */
+.hljs-number,
+.hljs-meta,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params {
+  color: #b65611;
+}
+
+/* Atelier-Dune Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet {
+  color: #60ac39;
+}
+
+/* Atelier-Dune Blue */
+.hljs-title,
+.hljs-section {
+  color: #6684e1;
+}
+
+/* Atelier-Dune Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+  color: #b854d4;
+}
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  background: #fefbec;
+  color: #6e6b5e;
+  padding: 0.5em;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family:  "Meiryo", "Segoe WPC", "Segoe UI", "SFUIText-Light", "HelveticaNeue-Light", sans-serif, "Droid Sans Fallback";
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+<link rel="stylesheet" href="file:///d%3A/software/01_TextEditor/VSCode/css/markdown-style.css" type="text/css">
+</head>
+<body>
+<div class="header">
+<h1 id="markdown">Markdown</h1>
+</div>
+<div class="nav">
+<p>ナビゲーションバー</p>
+<ol>
+<li><a href="#css">スタイルシート</a></li>
+<li><a href="#how_to_write">記法についてとか</a></li>
+<li><a href="#reference">参考</a></li>
+</ol>
+</div>
+<div class="footer">
+<p>2018/06/03<br>
+by @mimimizuk</p>
+</div>
+<div class="main">
+<h1 id="%E8%A6%8B%E5%87%BA%E3%81%97%EF%BC%91-markdown%E3%81%A3%E3%81%A6%E3%81%84%E3%81%86%E3%81%99%E3%81%94%E3%81%84%E3%82%84%E3%81%A4">見出し１ Markdownっていうすごいやつ</h1>
+<p><strong>手間をかけたくないけどメモ帳とかワードはちょっと…みたいな時にべんり</strong><br>
+マークダウンはHTMLとかと同じマークアップ言語のひとつ。<br>
+HTMLほど器用じゃないけど書くのが楽でわりと綺麗に整う。<br>
+配布されてる拡張機能を使えばhtml変換とかもできちゃうすぐれもの。<br>
+CSSが使えるから見た目は多分そこそこ好きにいじれる。</p>
+<p>使ってるエディタはマイクロソフトのVSCode。サクサクうごく。</p>
+<p><strong><img class="emoji" alt="exclamation" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAEXklEQVR42u2aTWhcZRSG3/Pda2aIk78WjQiBgi5KKDF04y4Igq1ShIKL4kLQhVtBQcGdILgviLhz6w910xIQ4ra67cJIaSZJZ5ppfiZD5ufOnbnfOcfFvZOO1cncLDLpfJkDd5c7k/vcc95zzvsNqSrOchic8RgBGAEYATjb4Z/UBz9eWPgqc+HCG97UVATm1K3GeJ5pbW3lzq+svD7UAPY3NuZnM5ml52dnocxAmnZLBAJQLRSGPwN2jPlT799/L1xdBaecNQgAEWHH8/DysAMwRHn2fdDYGLxj3CcAZIDD2YkBUJFC5HmQY9xDABhABNSHvgtEnrfNIlYAaMoLydsX1YfDD6BS2baq+5K82bQQGACrFocewNuqLSbatcd4eEkAOJEBAGCBDauaGoDG90CINoZeBAFAVfP8VI33E0GrCmbOOwFAgHVOUlvT/X2cAcCaEwAAbLaPAYDiFgiKopITAFikyMYARH0BmI4Iimi72Sy7kQHWFqzvp57skhIoX1MNnOgCVxqNkk3q+nDMPeKKADDRrlN+QFt1S1O2QlYFA+tOAVCRQtphiAFEqnmnADBQ5JR7QAJqoBngn3gGqG7aFK2wowGquukUAAusR10acBQAjjfBolsZAOTTTIOUlABZW3AKgIispzFGOovQu43GllMiGBLt9tsIKVZ/sGoJA44TB/B+rVZm1YD7GCPJGFxwDoCqqgXK/VohA7BERecAIHZ4Stzn7dsYVsFJABZYY9WeO4B2jJAB+gAD6wJJGawf5QzJkykw7yQAAdaiuBT+F8ChBohsuJkBxhStKoSo5wwQqSIEdtzUAOYidz1sDxFsLtfr+04CaNXrBdtDBPFECMs/qbKTAD5SrTEQ2B7DkI27wMCnwIEBSHaCR0YV/lPXc6pALI5rpwHAH9QXHajW6yL/Id7ZAhnYdRrAnsh3FWuXNPY9QF2iSEDmRd//9TQA0OiXomc8Tg3Az5cu5Z4FAAMtgduLi9fPT05+9tLMzIKXzU5EQVB5VKncrVarX1+7d++u0wBW5udvXTx37nrO97FfrUKiCH4mg+nJSZTDEA8qlW/eWl390kkAy3Nz31+cmPiY63X8vbf3r7NC3xgszs6inMmgUKt9+E6x+INTAJanp1/Jjo8/mAFQqNXgGwPTtRSJCATA3NQUSu1268r2dtYpEQxVPzDtNnbDEJ7ngZKj8kND1BgQEcpBAN/azC+53JtOAWipvta0FizS0xQlIkQiaDEjMuayWxlAlGknZdbvZDhURUt1wikAgepWiHSHo01VNAbsCp04gBrzrUpsePYsgaRUcKCKhupvTgH4otG4U2Z+WE40wHSBoK5/YEcE+yK3Pw8Ctw5HAeDA2qtN4K9QFS8Yg7HkwRVAE0BJBI9F9tpBcMPZSfDTbPZVNebHHNHlcSJ4iQ9QV0WgeidqNm98q1p3FkAnPslmrwrREhFNQ7UI5t9vttt/nIllaLQOjwCMAIwAjAA8Y/EPeqMRHQ+9uFUAAAAASUVORK5CYII=" />ちなみにこのページはIE非対応です<img class="emoji" alt="exclamation" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAEXklEQVR42u2aTWhcZRSG3/Pda2aIk78WjQiBgi5KKDF04y4Igq1ShIKL4kLQhVtBQcGdILgviLhz6w910xIQ4ra67cJIaSZJZ5ppfiZD5ufOnbnfOcfFvZOO1cncLDLpfJkDd5c7k/vcc95zzvsNqSrOchic8RgBGAEYATjb4Z/UBz9eWPgqc+HCG97UVATm1K3GeJ5pbW3lzq+svD7UAPY3NuZnM5ml52dnocxAmnZLBAJQLRSGPwN2jPlT799/L1xdBaecNQgAEWHH8/DysAMwRHn2fdDYGLxj3CcAZIDD2YkBUJFC5HmQY9xDABhABNSHvgtEnrfNIlYAaMoLydsX1YfDD6BS2baq+5K82bQQGACrFocewNuqLSbatcd4eEkAOJEBAGCBDauaGoDG90CINoZeBAFAVfP8VI33E0GrCmbOOwFAgHVOUlvT/X2cAcCaEwAAbLaPAYDiFgiKopITAFikyMYARH0BmI4Iimi72Sy7kQHWFqzvp57skhIoX1MNnOgCVxqNkk3q+nDMPeKKADDRrlN+QFt1S1O2QlYFA+tOAVCRQtphiAFEqnmnADBQ5JR7QAJqoBngn3gGqG7aFK2wowGquukUAAusR10acBQAjjfBolsZAOTTTIOUlABZW3AKgIispzFGOovQu43GllMiGBLt9tsIKVZ/sGoJA44TB/B+rVZm1YD7GCPJGFxwDoCqqgXK/VohA7BERecAIHZ4Stzn7dsYVsFJABZYY9WeO4B2jJAB+gAD6wJJGawf5QzJkykw7yQAAdaiuBT+F8ChBohsuJkBxhStKoSo5wwQqSIEdtzUAOYidz1sDxFsLtfr+04CaNXrBdtDBPFECMs/qbKTAD5SrTEQ2B7DkI27wMCnwIEBSHaCR0YV/lPXc6pALI5rpwHAH9QXHajW6yL/Id7ZAhnYdRrAnsh3FWuXNPY9QF2iSEDmRd//9TQA0OiXomc8Tg3Az5cu5Z4FAAMtgduLi9fPT05+9tLMzIKXzU5EQVB5VKncrVarX1+7d++u0wBW5udvXTx37nrO97FfrUKiCH4mg+nJSZTDEA8qlW/eWl390kkAy3Nz31+cmPiY63X8vbf3r7NC3xgszs6inMmgUKt9+E6x+INTAJanp1/Jjo8/mAFQqNXgGwPTtRSJCATA3NQUSu1268r2dtYpEQxVPzDtNnbDEJ7ngZKj8kND1BgQEcpBAN/azC+53JtOAWipvta0FizS0xQlIkQiaDEjMuayWxlAlGknZdbvZDhURUt1wikAgepWiHSHo01VNAbsCp04gBrzrUpsePYsgaRUcKCKhupvTgH4otG4U2Z+WE40wHSBoK5/YEcE+yK3Pw8Ctw5HAeDA2qtN4K9QFS8Yg7HkwRVAE0BJBI9F9tpBcMPZSfDTbPZVNebHHNHlcSJ4iQ9QV0WgeidqNm98q1p3FkAnPslmrwrREhFNQ7UI5t9vttt/nIllaLQOjwCMAIwAjAA8Y/EPeqMRHQ+9uFUAAAAASUVORK5CYII=" /></strong><br>
+あっ<img class="emoji" alt="exclamation" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAEXklEQVR42u2aTWhcZRSG3/Pda2aIk78WjQiBgi5KKDF04y4Igq1ShIKL4kLQhVtBQcGdILgviLhz6w910xIQ4ra67cJIaSZJZ5ppfiZD5ufOnbnfOcfFvZOO1cncLDLpfJkDd5c7k/vcc95zzvsNqSrOchic8RgBGAEYATjb4Z/UBz9eWPgqc+HCG97UVATm1K3GeJ5pbW3lzq+svD7UAPY3NuZnM5ml52dnocxAmnZLBAJQLRSGPwN2jPlT799/L1xdBaecNQgAEWHH8/DysAMwRHn2fdDYGLxj3CcAZIDD2YkBUJFC5HmQY9xDABhABNSHvgtEnrfNIlYAaMoLydsX1YfDD6BS2baq+5K82bQQGACrFocewNuqLSbatcd4eEkAOJEBAGCBDauaGoDG90CINoZeBAFAVfP8VI33E0GrCmbOOwFAgHVOUlvT/X2cAcCaEwAAbLaPAYDiFgiKopITAFikyMYARH0BmI4Iimi72Sy7kQHWFqzvp57skhIoX1MNnOgCVxqNkk3q+nDMPeKKADDRrlN+QFt1S1O2QlYFA+tOAVCRQtphiAFEqnmnADBQ5JR7QAJqoBngn3gGqG7aFK2wowGquukUAAusR10acBQAjjfBolsZAOTTTIOUlABZW3AKgIispzFGOovQu43GllMiGBLt9tsIKVZ/sGoJA44TB/B+rVZm1YD7GCPJGFxwDoCqqgXK/VohA7BERecAIHZ4Stzn7dsYVsFJABZYY9WeO4B2jJAB+gAD6wJJGawf5QzJkykw7yQAAdaiuBT+F8ChBohsuJkBxhStKoSo5wwQqSIEdtzUAOYidz1sDxFsLtfr+04CaNXrBdtDBPFECMs/qbKTAD5SrTEQ2B7DkI27wMCnwIEBSHaCR0YV/lPXc6pALI5rpwHAH9QXHajW6yL/Id7ZAhnYdRrAnsh3FWuXNPY9QF2iSEDmRd//9TQA0OiXomc8Tg3Az5cu5Z4FAAMtgduLi9fPT05+9tLMzIKXzU5EQVB5VKncrVarX1+7d++u0wBW5udvXTx37nrO97FfrUKiCH4mg+nJSZTDEA8qlW/eWl390kkAy3Nz31+cmPiY63X8vbf3r7NC3xgszs6inMmgUKt9+E6x+INTAJanp1/Jjo8/mAFQqNXgGwPTtRSJCATA3NQUSu1268r2dtYpEQxVPzDtNnbDEJ7ngZKj8kND1BgQEcpBAN/azC+53JtOAWipvta0FizS0xQlIkQiaDEjMuayWxlAlGknZdbvZDhURUt1wikAgepWiHSHo01VNAbsCp04gBrzrUpsePYsgaRUcKCKhupvTgH4otG4U2Z+WE40wHSBoK5/YEcE+yK3Pw8Ctw5HAeDA2qtN4K9QFS8Yg7HkwRVAE0BJBI9F9tpBcMPZSfDTbPZVNebHHNHlcSJ4iQ9QV0WgeidqNm98q1p3FkAnPslmrwrREhFNQ7UI5t9vttt/nIllaLQOjwCMAIwAjAA8Y/EPeqMRHQ+9uFUAAAAASUVORK5CYII=" />そう、絵文字も使えます<img class="emoji" alt="relaxed" src="data:image/png;base64,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" /><img class="emoji" alt="clap" src="data:image/png;base64,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" /><img class="emoji" alt="tada" src="data:image/png;base64,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" /></p>
+<p>↑はこう↓書いてる</p>
+<pre class="hljs"><code><div>**:exclamation:ちなみにこのページはIE非対応です:exclamation:**
+あっ:exclamation:そう、絵文字も使えます:relaxed::clap::tada:
+</div></code></pre>
+<p><a href="https://www.webpagefx.com/tools/emoji-cheat-sheet/">対応絵文字一覧</a></p>
+<ol>
+<li>
+<p>導入済み拡張機能</p>
+ <details>
+<ul>
+<li><strong>Markdown PDF</strong><br>
+mdファイル(Markdwonで書いたファイルの拡張子)を指定した拡張子のファイルに変換してくれるすごいやつ</li>
+<li><strong>Auto-Open Markdown Preview</strong><br>
+VScode起動したときにmdファイル開いてたらプレビュー画面も自動で開いてくれるやつ（たぶん）</li>
+<li><strong>Japaneseなんちゃら</strong><br>
+たぶんVScodeを日本語化するやつ<pre class="hljs"><code><div><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"D:\\"</span>&gt;</span>Dドライブ<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+</div></code></pre>
+</li>
+</ul>
+ </details>
+</li>
+<li>
+<p>番号リスト</p>
+ <details>
+<ul>
+<li>リスト</li>
+<li>リスト</li>
+</ul>
+ </details>
+</li>
+</ol>
+<br>
+<h2 id="%E8%A6%8B%E5%87%BA%E3%81%97%EF%BC%92-markdown%E3%81%AE%E3%81%82%E3%82%8C%E3%81%93%E3%82%8C">見出し２ Markdownのあれこれ</h2>
+<h3 id="%E8%A6%8B%E5%87%BA%E3%81%97%EF%BC%93-markdown-pdf%E7%94%A8%E3%81%AE%E8%A8%AD%E5%AE%9A%E5%80%A4">見出し３　Markdown PDF用の設定値</h3>
+<p>User Settingsに書く</p>
+<pre class="hljs"><code><div>{
+    // .mdファイルを保存すると同時にhtmlとかPDFを自動で生成してくれる
+    <span class="hljs-attr">"markdown-pdf.convertOnSave"</span>: <span class="hljs-literal">true</span>,
+    // 編集中のファイルを相対パスの起点にする
+    <span class="hljs-attr">"markdown-pdf.outputDirectoryRelativePathFile"</span>: <span class="hljs-literal">true</span>,
+    // 改行を有効にする
+    <span class="hljs-attr">"markdown-pdf.breaks"</span>: <span class="hljs-literal">true</span>,
+    // Markdown-pdf.typeで指定したファイルの生成先
+    <span class="hljs-attr">"markdown-pdf.outputDirectory"</span>: <span class="hljs-string">"D:\\software\\01_TextEditor\\VSCode\\html"</span>,
+    // ここで指定した拡張子のファイルが生成される
+    <span class="hljs-attr">"markdown-pdf.type"</span>: [
+        <span class="hljs-string">"html"</span>
+    ],
+    // 作ったファイルに適用するスタイルシート指定　cssは手作りするか誰かのもらってきて
+    <span class="hljs-attr">"markdown-pdf.styles"</span>: [
+        <span class="hljs-string">"D:\\software\\01_TextEditor\\VSCode\\css"</span>
+    ],
+    // シンタックスハイライトのスタイルシート指定　
+    <span class="hljs-attr">"markdown-pdf.highlightStyle"</span>: <span class="hljs-string">"atelier-dune-light.css"</span>,
+    // よくわからんけどMarkdown PDFが拡張子の変換に使うらしい
+    <span class="hljs-attr">"markdown-pdf.executablePath"</span>: <span class="hljs-string">"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe"</span>
+}
+</div></code></pre>
+<p>シンタックスハイライトのは適用例が見れるサイトあるからそこで探すとはかどる。<br>
+→ <a href="https://highlightjs.org/static/demo/">highlight.js demo</a></p>
+<h3 id="a-idcsscss%E3%81%AE%E4%B8%AD%E8%BA%AB%E3%81%A8%E3%81%8Ba"><a id="css">cssの中身とか</a></h3>
+<details>
+<pre class="hljs"><code><div><span class="hljs-comment">/* 全部に適用 */</span>
+* {
+    <span class="hljs-attribute">font-family</span>: <span class="hljs-string">"メイリオ"</span> ;
+}
+
+<span class="hljs-comment">/* --- gridレイアウト ここから--- */</span>
+<span class="hljs-comment">/* bodyをgridのコンテナとして使うよ*/</span>
+<span class="hljs-selector-tag">body</span> {
+    <span class="hljs-attribute">background</span>: burlywood;
+    <span class="hljs-attribute">display</span>: grid;
+    <span class="hljs-attribute">grid-auto-rows</span>: <span class="hljs-number">150px</span> <span class="hljs-number">1</span>fr <span class="hljs-number">50px</span> ;    <span class="hljs-comment">/*上から150pxの枠、残りスペース枠、50px枠用意する*/</span>
+    <span class="hljs-attribute">grid-template-columns</span>: <span class="hljs-number">200px</span> <span class="hljs-number">1</span>fr;   <span class="hljs-comment">/*左から200pxの枠、50px枠、残りスペース枠用意する*/</span>
+    <span class="hljs-attribute">grid-template-areas</span>:                <span class="hljs-comment">/*コンテナ上のアイテム配置指定 . のところはアイテム無し */</span>
+        <span class="hljs-string">"header header"</span>
+        <span class="hljs-string">"nav    main  "</span>
+        <span class="hljs-string">".      footer"</span>;
+}
+
+<span class="hljs-comment">/* 以下gridアイテム */</span>
+<span class="hljs-comment">/* ヘッダ */</span>
+<span class="hljs-selector-class">.header</span> {
+    <span class="hljs-attribute">grid-area</span>: header;
+    <span class="hljs-attribute">display</span>:flex;               <span class="hljs-comment">/*フレックスコンテナに指定*/</span>
+    <span class="hljs-attribute">justify-content</span>: center;    <span class="hljs-comment">/*中身の配置場所*/</span>
+    <span class="hljs-attribute">background</span>: <span class="hljs-built_in">rgba</span>(172, 89, 51, 0.644);
+    <span class="hljs-attribute">padding</span>: <span class="hljs-number">20px</span>;              <span class="hljs-comment">/*内側領域*/</span>
+    <span class="hljs-attribute">margin</span>: <span class="hljs-number">10px</span> <span class="hljs-number">0</span>;             <span class="hljs-comment">/*外側領域*/</span>
+    <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">10px</span>;        <span class="hljs-comment">/*角丸*/</span>
+}
+
+<span class="hljs-comment">/* メイン　いろいろ書いてあるところ */</span>
+<span class="hljs-selector-class">.main</span> {
+    <span class="hljs-attribute">grid-area</span>: main;
+    <span class="hljs-attribute">background</span>: snow;
+    <span class="hljs-attribute">justify-content</span>: center;
+    <span class="hljs-attribute">padding</span>: <span class="hljs-number">2em</span>;
+    <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">10px</span>;
+}
+
+<span class="hljs-comment">/* ナビゲーションバー　左側にあるやつ */</span>
+<span class="hljs-selector-class">.nav</span> {
+    <span class="hljs-attribute">grid-area</span>: nav;
+    <span class="hljs-attribute">background</span>: <span class="hljs-built_in">rgba</span>(165, 42, 42, 0.801);
+    <span class="hljs-attribute">padding</span>: <span class="hljs-number">10px</span> <span class="hljs-number">15px</span>;
+    <span class="hljs-attribute">margin-right</span>: <span class="hljs-number">10px</span>;
+    <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">10px</span>;
+}
+
+<span class="hljs-comment">/* フッタ */</span>
+<span class="hljs-selector-class">.footer</span> {
+    <span class="hljs-attribute">grid-area</span>: footer;
+    <span class="hljs-attribute">display</span>:flex;
+    <span class="hljs-attribute">justify-content</span>: left;
+    <span class="hljs-attribute">padding</span>:<span class="hljs-number">2px</span> <span class="hljs-number">20px</span>;
+}
+<span class="hljs-comment">/* ---ここまで--- */</span>
+
+<span class="hljs-comment">/* ---見出しカスタム ここから--- */</span>
+<span class="hljs-comment">/* ヘッダ内のh1装飾 */</span>
+<span class="hljs-selector-class">.header</span> &gt; <span class="hljs-selector-tag">h1</span> {
+    <span class="hljs-attribute">font-family</span>: <span class="hljs-string">"游ゴシック"</span> ;
+    <span class="hljs-attribute">display</span>:flex;
+    <span class="hljs-attribute">justify-content</span>: center;
+    <span class="hljs-attribute">font-size</span>: <span class="hljs-number">2.7em</span>;
+    <span class="hljs-attribute">border-bottom</span>: dashed <span class="hljs-number">2px</span> <span class="hljs-number">#010101</span>;
+}
+
+<span class="hljs-comment">/* main内のh1装飾 */</span>
+<span class="hljs-selector-class">.main</span> &gt; <span class="hljs-selector-tag">h1</span> {
+    <span class="hljs-attribute">font-family</span>: <span class="hljs-string">"游ゴシック"</span> ;
+    <span class="hljs-attribute">padding</span>: <span class="hljs-number">0.5em</span>;<span class="hljs-comment">/*文字周りの余白*/</span>
+    <span class="hljs-attribute">color</span>: <span class="hljs-number">#010101</span>;<span class="hljs-comment">/*文字色*/</span>
+    <span class="hljs-attribute">background</span>: <span class="hljs-built_in">rgb</span>(252, 242, 231);<span class="hljs-comment">/*背景色*/</span>
+    <span class="hljs-attribute">border-bottom</span>: solid <span class="hljs-number">3px</span> <span class="hljs-built_in">rgba</span>(165, 42, 42, 0.801);<span class="hljs-comment">/*下線*/</span>
+    <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">0.5em</span>;<span class="hljs-comment">/*角丸*/</span>
+}
+
+<span class="hljs-selector-tag">h1</span><span class="hljs-selector-pseudo">::first-letter</span> {
+    <span class="hljs-attribute">font-size</span>: <span class="hljs-number">1.5em</span>;<span class="hljs-comment">/* h1の一文字目を大きく */</span>
+}
+
+<span class="hljs-selector-tag">h2</span> {
+    <span class="hljs-attribute">font-family</span>: <span class="hljs-string">"游ゴシック"</span> ;
+    <span class="hljs-attribute">padding</span>: <span class="hljs-number">0.25em</span>;<span class="hljs-comment">/*文字周りの余白*/</span>
+    <span class="hljs-attribute">border-bottom</span>: dotted <span class="hljs-number">5px</span> <span class="hljs-built_in">rgba</span>(172, 89, 51, 0.644);<span class="hljs-comment">/*線の種類（点線）太さ 色*/</span>
+}
+
+<span class="hljs-selector-tag">h3</span> {
+    <span class="hljs-attribute">font-family</span>: <span class="hljs-string">"游ゴシック"</span> ;
+    <span class="hljs-attribute">padding</span>: <span class="hljs-number">0.25em</span> <span class="hljs-number">0.5em</span>;<span class="hljs-comment">/*上下 左右の余白*/</span>
+    <span class="hljs-attribute">color</span>: <span class="hljs-number">#494949</span>;<span class="hljs-comment">/*文字色*/</span>
+    <span class="hljs-attribute">background</span>: transparent;<span class="hljs-comment">/*背景透明に*/</span>
+    <span class="hljs-attribute">border-left</span>: solid <span class="hljs-number">5px</span> <span class="hljs-built_in">rgba</span>(172, 89, 51, 0.644);<span class="hljs-comment">/*左線*/</span>
+}
+<span class="hljs-comment">/* ---ここまで--- */</span>
+
+<span class="hljs-comment">/* 水平線カスタム */</span>
+<span class="hljs-selector-tag">hr</span> {
+    <span class="hljs-attribute">border</span>:none;
+    <span class="hljs-attribute">border-top</span>: <span class="hljs-number">3px</span> dashed <span class="hljs-built_in">rgba</span>(172, 89, 51, 0.644);
+  }
+
+<span class="hljs-comment">/* リンク色カスタム */</span>
+<span class="hljs-selector-tag">a</span> {<span class="hljs-attribute">color</span>: black;}
+<span class="hljs-selector-tag">a</span><span class="hljs-selector-pseudo">:link</span> { <span class="hljs-attribute">color</span>: burlywood; }<span class="hljs-comment">/*未訪問のリンク*/</span>
+<span class="hljs-selector-tag">a</span><span class="hljs-selector-pseudo">:visited</span> { <span class="hljs-attribute">color</span>: burlywood; }<span class="hljs-comment">/*訪問済みリンク*/</span>
+<span class="hljs-selector-tag">a</span><span class="hljs-selector-pseudo">:hover</span> { <span class="hljs-attribute">color</span>: <span class="hljs-built_in">rgb</span>(94, 22, 0); }<span class="hljs-comment">/*ポイント時のリンク*/</span>
+<span class="hljs-selector-tag">a</span><span class="hljs-selector-pseudo">:active</span> { <span class="hljs-attribute">color</span>: <span class="hljs-number">#ff8000</span>; }<span class="hljs-comment">/*選択中のリンク*/</span>
+
+<span class="hljs-comment">/* 引用文色カスタム */</span>
+<span class="hljs-selector-tag">blockquote</span> {
+    <span class="hljs-attribute">border-left</span>: solid <span class="hljs-number">5px</span> <span class="hljs-built_in">rgba</span>(172, 89, 51, 0.644);<span class="hljs-comment">/*左線*/</span>
+}
+
+<span class="hljs-comment">/* 段落下げ */</span>
+<span class="hljs-selector-class">.main</span> &gt; <span class="hljs-selector-tag">p</span>, <span class="hljs-selector-tag">details</span>, <span class="hljs-selector-tag">pre</span>, <span class="hljs-selector-tag">table</span>, <span class="hljs-selector-tag">blockquote</span>{
+    <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">1em</span>;
+}
+</div></code></pre>
+<p>CSSでgridレイアウトにするとき、以下の箇所を揃えること。<br>
+これがアイテム名になる。</p>
+<ul>
+<li>コンテナ部分にあたるセレクタ<code>main</code>のプロパティ：<code>grid-template-areas</code>の中で配置指定に使う値</li>
+<li>アイテム部分にあたるセレクタ：<code>.header</code>の部分</li>
+<li>上記セレクタのプロパティ：<code>grid-area</code>の値</li>
+</ul>
+</details>
+<hr>
+<p>↓CSSで用意したgridのアイテムをマークダウンで使う時↓</p>
+<pre class="hljs"><code><div><span class="xml"><span class="hljs-comment">&lt;!-- mainとかheaderがアイテム名 --&gt;</span></span>
+　:::header
+　内容物
+　:::
+　:::footer
+　内容物
+　:::
+　:::main
+　内容物
+　:::
+</div></code></pre>
+<p>みたいな感じ</p>
+<h3 id="a-idhowtowrite%E8%A8%98%E6%B3%95%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E3%81%A8%E3%81%8Ba"><a id="how_to_write">記法についてとか</a></h3>
+<ol>
+<li>
+<p><strong>URL張り付け</strong><br>
+*HTMLの場合</p>
+<pre class="hljs"><code><div><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"URL"</span>&gt;</span>表示文字列<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+</div></code></pre>
+<p>*Markdownの場合</p>
+<pre class="hljs"><code><div>[<span class="hljs-string">表示文字列</span>](<span class="hljs-link">URL</span>)
+</div></code></pre>
+<p>*ただし、ローカルフォルダのパスをリンクする場合はHTML形式で書く</p>
+<pre class="hljs"><code><div><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"D:\\"</span>&gt;</span>Dドライブ<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+</div></code></pre>
+<p><a href="D:\\">Dドライブ</a><br>
+ちなみに、Windowsとかのフォルダパス区切りに使われているバックスラッシュ「<code>\</code>(￥)」は、いろいろあって一つだと上手く動かないので、手前にもう一つ<code>\</code>を記入してエスケープすること。</p>
+</li>
+<li>
+<p><strong>表</strong></p>
+<pre class="hljs"><code><div>|No|ゲーム|映画|  
+|:-:|:-:|:-:|
+|1|Metro|シンゴジ|
+|2|Titanfall|バトルシップ|
+|3|Splatoon|トランスフォーマー|
+|4|Fallout|パシフィックリム|
+|5|Wolfenstein|ワイルドスピード|
+</div></code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">No</th>
+<th style="text-align:center">ゲーム</th>
+<th style="text-align:center">映画</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">Metro</td>
+<td style="text-align:center">シンゴジ</td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center">Titanfall</td>
+<td style="text-align:center">バトルシップ</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center">Splatoon</td>
+<td style="text-align:center">トランスフォーマー</td>
+</tr>
+<tr>
+<td style="text-align:center">4</td>
+<td style="text-align:center">Fallout</td>
+<td style="text-align:center">パシフィックリム</td>
+</tr>
+<tr>
+<td style="text-align:center">5</td>
+<td style="text-align:center">Wolfenstein</td>
+<td style="text-align:center">ワイルドスピード</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>引用</strong></p>
+<pre class="hljs"><code><div>&gt;引用とか
+&gt;&gt;二重引用とか
+</div></code></pre>
+<blockquote>
+<p>引用とか</p>
+<blockquote>
+<p>二重引用とか</p>
+</blockquote>
+</blockquote>
+</li>
+</ol>
+<br>
+<h3 id="a-idreference%E5%8F%82%E8%80%83%E3%81%AB%E3%81%97%E3%81%9F%E3%83%9A%E3%83%BC%E3%82%B8a"><a id="reference">参考にしたページ<a/></h3>
+<p><a href="https://github.com/yzane/vscode-markdown-pdf/blob/master/README.ja.md">vscode-markdown-pdf/README.ja.md</a>(Markdownはとりあえずここ読めばわかる)<br>
+<a href="https://qiita.com/kura07/items/e633b35e33e43240d363">CSS Grid Layout を極める！（基礎編）</a><br>
+<a href="https://qiita.com/vimyum/items/a8377a76dac101024ae2">[Reveal.js] CSS Grid Layout</a><br>
+<a href="https://www.webcreatorbox.com/tech/border-radius">css border-rediusで角丸</a><br>
+<a href="https://saruwakakun.com/html-css/reference/h-design">css 見出し例</a></p>
+<br>
+</div>
+
+</body>
+</html>
