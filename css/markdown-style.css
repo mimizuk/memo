@@ -9,7 +9,7 @@ body {
     background: burlywood;
     display: grid;
     grid-auto-rows: 150px 1fr 50px ;    /*上から150pxの枠、残りスペース枠、50px枠用意する*/
-    grid-template-columns: 200px 1fr;   /*左から200pxの枠、50px枠、残りスペース枠用意する*/
+    grid-template-columns: 25% 1fr;   /*左から200pxの枠、50px枠、残りスペース枠用意する*/
     grid-template-areas:                /*コンテナ上のアイテム配置指定 . のところはアイテム無し */
         "header header"
         "nav    main  "
@@ -32,6 +32,7 @@ body {
 .main {
     grid-area: main;
     font-size: 110%;
+    margin: 0 15% 0 0%;
     background: snow;
     justify-content: center;
     padding: 2em;
@@ -41,6 +42,7 @@ body {
 /* ナビゲーションバー　左側にあるやつ */
 .nav {
     grid-area: nav;
+    margin: 0 0% 0 30%;
     background: rgba(165, 42, 42, 0.801);
     padding: 10px 15px;
     margin-right: 10px;
