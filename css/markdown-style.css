@@ -1,36 +1,30 @@
-/* 全部に適用 */
 * {
     font-family: "メイリオ" ;
 }
 
-/* --- gridレイアウト ここから--- */
-/* bodyをコンテナとして使うよ*/
 body {
     background: burlywood;
     display: grid;
     width: 900px;
     margin: 0 auto;
-    grid-auto-rows: 150px 1fr 50px ;    /*上から150pxの枠、残りスペース枠、50px枠用意する*/
-    grid-template-columns: 200px 1fr;   /*左から200pxの枠、50px枠、残りスペース枠用意する*/
-    grid-template-areas:                /*コンテナ上のアイテム配置指定 . のところはアイテム無し */
+    grid-auto-rows: 150px 1fr 50px ;
+    grid-template-columns: 200px 1fr;
+    grid-template-areas:
         "header header"
         "nav    main  "
         ".      footer";
 }
 
-/* 以下gridアイテム */
-/* ヘッダ */
 .header {
     grid-area: header;
-    display:flex;               /*フレックスコンテナに指定*/
-    justify-content: center;    /*中身の配置場所*/
+    display:flex;
+    justify-content: center;
     background: rgba(172, 89, 51, 0.644);
-    padding: 20px;              /*内側領域*/
-    margin: 10px 0;             /*外側領域*/
-    border-radius: 10px;        /*角丸*/
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 10px;
 }
 
-/* メイン　いろいろ書いてあるところ */
 .main {
     grid-area: main;
     font-size: 110%;
@@ -40,7 +34,6 @@ body {
     border-radius: 10px;
 }
 
-/* ナビゲーションバー　左側にあるやつ */
 .nav {
     grid-area: nav;
     background: rgba(165, 42, 42, 0.801);
@@ -49,17 +42,13 @@ body {
     border-radius: 10px;
 }
 
-/* フッタ */
 .footer {
     grid-area: footer;
     display:flex;
     justify-content: left;
     padding:2px 20px;
 }
-/* ---ここまで--- */
 
-/* ---見出しカスタム ここから--- */
-/* ヘッダ内のh1装飾 */
 .header > h1 {
     font-family: "游ゴシック" ;
     display:flex;
@@ -68,54 +57,48 @@ body {
     border-bottom: dashed 2px #010101;
 }
 
-/* main内のh1装飾 */
 .main > h1 {
     font-family: "游ゴシック" ;
-    padding: 0.5em;/*文字周りの余白*/
-    color: #010101;/*文字色*/
-    background: rgb(252, 242, 231);/*背景色*/
-    border-bottom: solid 3px rgba(165, 42, 42, 0.801);/*下線*/
-    border-radius: 0.5em;/*角丸*/
+    padding: 0.5em;
+    color: #010101;
+    background: rgb(252, 242, 231);
+    border-bottom: solid 3px rgba(165, 42, 42, 0.801);
+    border-radius: 0.5em;
 }
 
 h1::first-letter {
-    font-size: 1.5em;/* h1の一文字目を大きく */
+    font-size: 1.5em;
 }
 
 h2 {
     font-family: "游ゴシック" ;
-    padding: 0.25em;/*文字周りの余白*/
-    border-bottom: dotted 5px rgba(172, 89, 51, 0.644);/*線の種類（点線）太さ 色*/
+    padding: 0.25em;
+    border-bottom: dotted 5px rgba(172, 89, 51, 0.644);
 }
 
 h3 {
     font-family: "游ゴシック" ;
-    padding: 0.25em 0.5em;/*上下 左右の余白*/
-    color: #494949;/*文字色*/
-    background: transparent;/*背景透明に*/
-    border-left: solid 5px rgba(172, 89, 51, 0.644);/*左線*/
+    padding: 0.25em 0.5em;
+    color: #494949;
+    background: transparent;
+    border-left: solid 5px rgba(172, 89, 51, 0.644);
 }
-/* ---ここまで--- */
 
-/* 水平線カスタム */
 hr {
     border:none;
     border-top: 3px dashed rgba(172, 89, 51, 0.644);
   }
 
-/* リンク色カスタム */
 a {color: black;}
-a:link { color: burlywood; }/*未訪問のリンク*/
-a:visited { color: burlywood; }/*訪問済みリンク*/
-a:hover { color: rgb(94, 22, 0); }/*ポイント時のリンク*/
-a:active { color: #ff8000; }/*選択中のリンク*/
+a:link { color: burlywood; }
+a:visited { color: burlywood; }
+a:hover { color: rgb(94, 22, 0); }
+a:active { color: #ff8000; }
 
-/* 引用文色カスタム */
 blockquote {
-    border-left: solid 5px rgba(172, 89, 51, 0.644);/*左線*/
+    border-left: solid 5px rgba(172, 89, 51, 0.644);
 }
 
-/* 段落下げ */
 .main > p, details, pre, table, blockquote{
     margin-left: 1em;
 }
