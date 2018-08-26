@@ -2,4 +2,4 @@
 
 [メモメインページ](html/markdown-stylecss/Memo.html)
 
-[メモ２s](md/Memo.md)
+[メモ２s](md/memo.md)
