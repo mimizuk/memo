@@ -15,6 +15,6 @@ by @mimimizuk
 :::
 
 :::main     
-[Moniter](./Moniter_memo.html)  
-[Markdown](./Markdown_memo.html)    
+[Moniter](./Moniter_memo.md)  
+[Markdown](./Markdown_memo.md)    
 :::
