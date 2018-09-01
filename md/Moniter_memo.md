@@ -160,7 +160,8 @@ VAパネル。輝度は300らしいが標準かピークかは不明。
 1. 現実 [BenQ EW3270U](http://www.benq.co.jp/product/monitor/ew3270u/specifications/)   
 VAパネル。輝度は300らしいが標準かピークかは不明。
 スペック表の通りHDMI 2.0 x2 / Display Port 1.4 対応。   
-LEDについての記載なし。フリッカーフリー搭載。  
+LEDについての記載なし。この[記事](http://blog.livedoor.jp/wisteriear/archives/1070972025.html)曰く、エリア駆動非対応っぽい。エッジ型直下型かは不明。  
+フリッカーフリー搭載。  
 安い。5万ちょっとくらい。   
 保証：本体は3年、パネル・バックライトユニットは1年
 
