@@ -1,5 +1,5 @@
 /*デバイスの横幅が900px以下の場合*/
-@media only screen and (max-width: 900px) {
+@media only screen and (max-device-width: 900px) {
     /* スマホ用nav https://copypet.jp/2012/ */
     /* 
     *, *:before, *:after {
@@ -194,7 +194,7 @@
 } 
 
 /*デバイスの横幅が901px以上の場合*/
-@media only screen and (min-width: 901px) {
+@media only screen and (min-device-width: 901px) {
     body {
         background: burlywood;
         display: grid;
