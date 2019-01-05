@@ -6,7 +6,7 @@
         display: grid;
         width: 90%;
         margin: 0 auto;
-        grid-auto-rows: 150px 1fr 50px ;
+        grid-auto-rows: 15% 1fr 5% ;
         grid-template-areas:
             "header"
             "main  "
@@ -18,17 +18,17 @@
         display:flex;
         justify-content: center;
         background: rgba(172, 89, 51, 0.644);
-        padding: 20px;
+        padding: 12vw;
         margin: 10px 0;
         border-radius: 10px;
     }
     
     .main {
         grid-area: main;
-        font-size: 110%;
+        font-size: 6vw;
         background: snow;
         justify-content: center;
-        padding: 2em;
+        padding: 3vw;
         border-radius: 10px;
     }
     
@@ -36,14 +36,13 @@
         grid-area: footer;
         display:flex;
         justify-content: left;
-        padding:2px 20px;
+        padding:3vw 6vw;
     }
     
     .header > h1 {
         font-family: "游ゴシック" ;
         display:flex;
         justify-content: center;
-        font-size: 2.7em;
         border-bottom: dashed 2px #010101;
     }
     
@@ -62,7 +61,7 @@
     }
     
     h1::first-letter {
-        font-size: 1.5vw;
+        font-size: 9vw;
     }
     
     h2 {
@@ -99,7 +98,7 @@
 
     /* 段落下げ */
     .main > p, details, pre, table, blockquote{
-        margin-left: 1vw;
+        margin-left: 6.0vw;
     }
 
 } 
