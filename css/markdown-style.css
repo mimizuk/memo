@@ -1,3 +1,196 @@
+/*デバイスの横幅が900px以下の場合*/
+@media only screen and (max-width: 22900px) {
+    /* メニュー https://copypet.jp/2012/ */
+    *, *:before, *:after {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    ol, ul {
+        list-style: none;
+    }
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+    .cp_cont {
+        height: 65vh;
+    }
+    .cp_offcm04 {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        display: inline-block;
+    }
+    /* menu */
+    .cp_offcm04 .cp_menu {
+        position: fixed;
+        top: 0;
+        left: -100vw;
+        width: 250px;
+        height: 100%;
+        cursor: pointer;
+        -webkit-transition: 0.53s transform;
+                transition: 0.53s transform;
+        -webkit-transition-timing-function: cubic-bezier(.38,.52,.23,.99);
+                transition-timing-function: cubic-bezier(.38,.52,.23,.99);
+        background-color: rgba(0,151,167 ,1);
+        opacity: 0.8;
+    }
+    .cp_offcm04 .cp_menu ul {
+        margin: 0;
+        padding: 0;
+    }
+    .cp_offcm04 .cp_menu li {
+        list-style: none;
+    }
+    .cp_offcm04 .cp_menu li a {
+        display: block;
+        padding: 20px;
+        text-decoration: none;
+        color: #ffffff;
+        border-bottom: 1px solid #ffffff;
+    }
+
+    .cp_offcm04 #cp_toggle04 {
+        position: absolute;
+        display: none;
+        opacity: 0;
+    }
+    .cp_offcm04 #cp_toggle04:checked ~ .cp_menu {
+        -webkit-transform: translateX(100vw);
+                transform: translateX(100vw);
+    }
+    /* menu toggle */
+    .cp_offcm04 #cp_toggle04 ~ label {
+        display: block;
+        padding: 0.5em;
+        cursor: pointer;
+        -webkit-transition: 0.5s transform;
+                transition: 0.5s transform;
+        -webkit-transition-timing-function: cubic-bezier(.61,-0.38,.37,1.27);
+                transition-timing-function: cubic-bezier(.61,-0.38,.37,1.27);
+        text-align: center;
+        color: #333333;
+    }
+    .cp_offcm04 #cp_toggle04:checked ~ label {
+        -webkit-transform: translateX(250px);
+                transform: translateX(250px);
+    }
+    .cp_offcm04 #cp_toggle04 ~ label::before {
+        font-family: 'FontAwesome';
+        content: '\f0c9';
+        font-size: 2em
+    }
+    .cp_offcm04 #cp_toggle04:checked ~ label::before {
+        content: '\f00d';
+    }
+    /* contents */
+    .cp_contents {
+        color: #333333;
+        text-align: center;
+    }
+
+
+
+    * {
+        font-family: "メイリオ" ;
+    }
+    
+    body {
+        background: burlywood;
+        display: grid;
+        width: 90%;
+        margin: 0 auto;
+        grid-auto-rows: 150px 1fr 50px ;
+        grid-template-areas:
+            "header"
+            "main  "
+            "footer";
+    }
+    
+    .header {
+        grid-area: header;
+        display:flex;
+        justify-content: center;
+        background: rgba(172, 89, 51, 0.644);
+        padding: 20px;
+        margin: 10px 0;
+        border-radius: 10px;
+    }
+    
+    .main {
+        grid-area: main;
+        font-size: 110%;
+        background: snow;
+        justify-content: center;
+        padding: 2em;
+        border-radius: 10px;
+    }
+    
+    .footer {
+        grid-area: footer;
+        display:flex;
+        justify-content: left;
+        padding:2px 20px;
+    }
+    
+    .header > h1 {
+        font-family: "游ゴシック" ;
+        display:flex;
+        justify-content: center;
+        font-size: 2.7em;
+        border-bottom: dashed 2px #010101;
+    }
+    
+    .main > h1 {
+        font-family: "游ゴシック" ;
+        padding: 0.5em;
+        color: #010101;
+        background: rgb(252, 242, 231);
+        border-bottom: solid 3px rgba(165, 42, 42, 0.801);
+        border-radius: 0.5em;
+    }
+    
+    h1::first-letter {
+        font-size: 1.5em;
+    }
+    
+    h2 {
+        font-family: "游ゴシック" ;
+        padding: 0.25em;
+        border-bottom: dotted 5px rgba(172, 89, 51, 0.644);
+    }
+    
+    h3 {
+        font-family: "游ゴシック" ;
+        padding: 0.25em 0.5em;
+        color: #494949;
+        background: transparent;
+        border-left: solid 5px rgba(172, 89, 51, 0.644);
+    }
+    
+    hr {
+        border:none;
+        border-top: 3px dashed rgba(172, 89, 51, 0.644);
+      }
+    
+    a {color: black;}
+    a:link { color: burlywood; }
+    a:visited { color: burlywood; }
+    a:hover { color: rgb(94, 22, 0); }
+    a:active { color: #ff8000; }
+    
+    blockquote {
+        border-left: solid 5px rgba(172, 89, 51, 0.644);
+    }
+    
+    .main > p, details, pre, table, blockquote{
+        margin-left: 1em;
+    }
+
+} 
+
 * {
     font-family: "メイリオ" ;
 }
@@ -5,7 +198,7 @@
 body {
     background: burlywood;
     display: grid;
-    width: 100%;
+    width: 90%;
     margin: 0 auto;
     grid-auto-rows: 150px 1fr 50px ;
     grid-template-columns: 200px 1fr;
