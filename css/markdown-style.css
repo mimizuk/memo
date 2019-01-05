@@ -11,8 +11,8 @@
             "header"
             "main  "
             "footer";
-        line-height: 1;
-        font-size: 4vw;
+        line-height: 1.2;
+        font-size: 3vw;
     }
     
     .header {
@@ -103,7 +103,7 @@
     }
 
     /* 段落下げ */
-    .main > p, details, pre, table, blockquote,ul{
+    .main > p, details, pre, table, blockquote, ul, ol{
         margin-left: 6.0vw;
     }
 
