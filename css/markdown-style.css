@@ -149,6 +149,7 @@
         border-radius: 0.5em;
     }
 
+    /* nav非表示 */
     .nav {
         visibility:hidden;
     }
