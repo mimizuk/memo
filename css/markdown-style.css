@@ -6,7 +6,7 @@
         display: grid;
         width: 90%;
         margin: 0 auto;
-        grid-auto-rows: 10% 1fr 5% ;
+        grid-auto-rows: 6% 1fr 2% ;
         grid-template-areas:
             "header"
             "main  "
@@ -45,15 +45,15 @@
         display:flex;
         font-size: 9vw;
         justify-content: center;
-        border-bottom: dashed 2vw #010101;
+        border-bottom: dashed 1vw #010101;
     }
     
     .main > h1 {
         font-family: "游ゴシック" ;
-        padding: 1vw;
+        padding: 1.5vw;
         color: #010101;
         background: rgb(252, 242, 231);
-        border-bottom: solid 2vw rgba(165, 42, 42, 0.801);
+        border-bottom: solid 1.5vw rgba(165, 42, 42, 0.801);
         border-radius: 0.5px;
         font-size: 6vw;
     }
@@ -69,16 +69,18 @@
     
     h2 {
         font-family: "游ゴシック" ;
-        padding: 0.25vw;
-        border-bottom: dotted 3vw rgba(172, 89, 51, 0.644);
+        padding: 0.5vw;
+        border-bottom: dotted 2vw rgba(172, 89, 51, 0.644);
+        font-size: 5vw;
     }
     
     h3 {
         font-family: "游ゴシック" ;
-        padding: 0.25vw 0.5vw;
+        padding: 0.5vw 0.75vw;
         color: #494949;
         background: transparent;
         border-left: solid 2vw rgba(172, 89, 51, 0.644);
+        font-size: 4vw;
     }
     
     /* 水平線 */
@@ -96,7 +98,7 @@
     
     /* 引用文色 */
     blockquote {
-        border-left: solid 5vw rgba(172, 89, 51, 0.644);
+        border-left: solid 2vw rgba(172, 89, 51, 0.644);
     }
 
     /* 段落下げ */
