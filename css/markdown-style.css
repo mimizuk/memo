@@ -12,6 +12,7 @@
             "main  "
             "footer";
         line-height: 1.5;
+        font-size: 4.5vw;
     }
     
     .header {
@@ -31,7 +32,6 @@
         justify-content: center;
         padding: 3vw;
         border-radius: 10px;
-        font-size: 4vw;
     }
     
     .footer {
@@ -77,11 +77,11 @@
     
     h3 {
         font-family: "游ゴシック" ;
-        padding: 0.8vw 0.75vw;
+        padding: 0.9vw 0.75vw;
         color: #494949;
         background: transparent;
         border-left: solid 1vw rgba(172, 89, 51, 0.644);
-        font-size: 5vw;
+        font-size: 5.5vw;
     }
     
     /* 水平線 */
