@@ -1,98 +1,5 @@
 /*デバイスの横幅が900px以下の場合*/
 @media only screen and (max-device-width: 900px) {
-    /* スマホ用nav https://copypet.jp/2012/ */
-    /* 
-    *, *:before, *:after {
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-    }
-    ol, ul {
-        list-style: none;
-    }
-    */
-    a {
-        text-decoration: none;
-        color: inherit;
-    }
-    .cp_cont {
-        height: 65vh;
-    }
-    .cp_offcm04 {
-        position: absolute;
-        top: 20px;
-        left: 20px;
-        display: inline-block;
-    }
-    /* menu */
-    .cp_offcm04 .cp_menu {
-        position: fixed;
-        top: 0;
-        left: -100vw;
-        width: 250px;
-        height: 100%;
-        cursor: pointer;
-        -webkit-transition: 0.53s transform;
-                transition: 0.53s transform;
-        -webkit-transition-timing-function: cubic-bezier(.38,.52,.23,.99);
-                transition-timing-function: cubic-bezier(.38,.52,.23,.99);
-        background-color: rgba(0,151,167 ,1);
-        opacity: 0.8;
-    }
-    .cp_offcm04 .cp_menu ul {
-        margin: 0;
-        padding: 0;
-    }
-    .cp_offcm04 .cp_menu li {
-        list-style: none;
-    }
-    .cp_offcm04 .cp_menu li a {
-        display: block;
-        padding: 20px;
-        text-decoration: none;
-        color: #ffffff;
-        border-bottom: 1px solid #ffffff;
-    }
-
-    .cp_offcm04 #cp_toggle04 {
-        position: absolute;
-        display: none;
-        opacity: 0;
-    }
-    .cp_offcm04 #cp_toggle04:checked ~ .cp_menu {
-        -webkit-transform: translateX(100vw);
-                transform: translateX(100vw);
-    }
-    /* menu toggle */
-    .cp_offcm04 #cp_toggle04 ~ label {
-        display: block;
-        padding: 0.5em;
-        cursor: pointer;
-        -webkit-transition: 0.5s transform;
-                transition: 0.5s transform;
-        -webkit-transition-timing-function: cubic-bezier(.61,-0.38,.37,1.27);
-                transition-timing-function: cubic-bezier(.61,-0.38,.37,1.27);
-        text-align: center;
-        color: #333333;
-    }
-    .cp_offcm04 #cp_toggle04:checked ~ label {
-        -webkit-transform: translateX(250px);
-                transform: translateX(250px);
-    }
-    .cp_offcm04 #cp_toggle04 ~ label::before {
-        font-family: 'FontAwesome';
-        content: '\f0c9';
-        font-size: 2em
-    }
-    .cp_offcm04 #cp_toggle04:checked ~ label::before {
-        content: '\f00d';
-    }
-    /* contents */
-    .cp_contents {
-        color: #333333;
-        text-align: center;
-    }
-    
     /* スマホ用glid */
     body {
         background: burlywood;
@@ -155,7 +62,7 @@
     }
     
     h1::first-letter {
-        font-size: 1.5em;
+        font-size: 1.5vw;
     }
     
     h2 {
@@ -172,23 +79,27 @@
         border-left: solid 5px rgba(172, 89, 51, 0.644);
     }
     
+    /* 水平線 */
     hr {
         border:none;
         border-top: 3px dashed rgba(172, 89, 51, 0.644);
       }
     
+    /* リンク色 */
     a {color: black;}
     a:link { color: burlywood; }
     a:visited { color: burlywood; }
     a:hover { color: rgb(94, 22, 0); }
     a:active { color: #ff8000; }
     
+    /* 引用文色 */
     blockquote {
         border-left: solid 5px rgba(172, 89, 51, 0.644);
     }
-    
+
+    /* 段落下げ */
     .main > p, details, pre, table, blockquote{
-        margin-left: 1em;
+        margin-left: 1vw;
     }
 
 } 
