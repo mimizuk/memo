@@ -11,8 +11,8 @@
             "header"
             "main  "
             "footer";
-        line-height: 1.5;
-        font-size: 4.5vw;
+        line-height: 1;
+        font-size: 4vw;
     }
     
     .header {
@@ -70,14 +70,14 @@
 
     h2 {
         font-family: "游ゴシック" ;
-        padding: 0.8vw;
+        padding: 0.7vw;
         border-bottom: dotted 1.5vw rgba(172, 89, 51, 0.644);
         font-size: 6vw;
     }
     
     h3 {
         font-family: "游ゴシック" ;
-        padding: 0.9vw 0.75vw;
+        padding: 0.7vw 0.75vw;
         color: #494949;
         background: transparent;
         border-left: solid 1vw rgba(172, 89, 51, 0.644);
@@ -103,7 +103,7 @@
     }
 
     /* 段落下げ */
-    .main > p, details, pre, table, blockquote{
+    .main > p, details, pre, table, blockquote,ul{
         margin-left: 6.0vw;
     }
 
