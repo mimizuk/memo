@@ -30,7 +30,7 @@
         justify-content: center;
         padding: 3vw;
         border-radius: 10px;
-        font-size: 4vw;
+        font-size: 4.7vw;
     }
     
     .footer {
@@ -58,13 +58,9 @@
         border-radius: 0.5px;
         font-size: 7vw;
     }
+
     h1::first-letter {
         font-size: 10vw;
-    }
-
-    /* nav非表示 */
-    .nav {
-        visibility:hidden;
     }
 
     h2 {
@@ -83,6 +79,11 @@
         font-size: 5.5vw;
     }
     
+    /* nav非表示 */
+    .nav {
+        visibility:hidden;
+    }
+
     /* 水平線 */
     hr {
         border:none;
