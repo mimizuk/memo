@@ -12,11 +12,10 @@
             "main  "
             "footer";
         line-height: 1.2;
-        font-size: 2vw;
     }
     
     .header {
-        grid-area: header;
+        grid-area: header; 
         display:flex;
         justify-content: center;
         background: rgba(172, 89, 51, 0.644);
@@ -27,11 +26,11 @@
     
     .main {
         grid-area: main;
-        font-size: 6vw;
         background: snow;
         justify-content: center;
         padding: 3vw;
         border-radius: 10px;
+        font-size: 4vw;
     }
     
     .footer {
