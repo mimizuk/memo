@@ -1,5 +1,5 @@
 # memo
 
-[メモメインページ](html/markdown-stylecss/Memo.html)
+[メモ(html)](html/markdown-stylecss/Memo.html)
 
-[メモ２s](md/memo.md)
+[メモ(md)](md/memo.md)
