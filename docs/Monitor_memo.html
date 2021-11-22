@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Monitor_memo.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="4k%E3%83%A2%E3%83%8B%E3%82%BF%E3%83%BC%E8%B3%BC%E5%85%A5%E3%83%A1%E3%83%A2">4Kモニター購入メモ</h1>
+<p><a href="./BoughtMonitor_memo.html">購入後メモ</a></p>
+<h2 id="%E5%9F%BA%E6%9C%AC%E6%80%A7%E8%83%BD---%E6%9C%80%E4%BD%8E%E6%9D%A1%E4%BB%B6">基本性能 - 最低条件</h2>
+<ol>
+<li>4K(3840 * 2160)</li>
+<li>60Hz対応</li>
+<li>HDCP2.2(4K放送受信に必須)</li>
+</ol>
+<ul>
+<li>上3つ全てに対応したHDMI2.0端子(最低1つは必須、できればHDMI2.0a*4くらいほしい)</li>
+<li>1,2に対応したHDMI2.0a端子(4K配信受信不可でもいいからHDMI端子は複数あったほうが便利そう)</li>
+<li>DisplayPort 1.4(あると嬉しい)(4Kだけであれば1.2で良いが、HDRは1.4である必要がある)</li>
+</ul>
+<p>※ ケーブルはいずれも上記のバージョン以降でないと4K/60Hz、HDRに対応していないため要注意<br>
+<strong>参考</strong><br>
+<a href="https://pc.watch.impress.co.jp/docs/news/746343.html">PCWatch - DisplayPort 1.4</a>
+<a href="https://www.gizmodo.jp/2018/06/you_are_probably_using_the_wrong_hdmi_cord.html">GIZMOOD - HDMI</a></p>
+<h2 id="%E5%9F%BA%E6%9C%AC%E6%80%A7%E8%83%BD---%E7%94%A8%E9%80%94%E3%81%AB%E5%90%88%E3%82%8F%E3%81%9B%E3%81%A6%E9%81%B8%E6%8A%9E">基本性能 - 用途に合わせて選択</h2>
+<h3 id="%E8%A1%A8%E9%9D%A2%E5%8A%A0%E5%B7%A5">表面加工</h3>
+<ol>
+<li>非光沢 (ノングレアとも呼ぶ。反射なし。見やすい。疲れない。作業向け)</li>
+<li>半光沢 (ハーフグレアとも呼ぶらしい？微妙に反射ない。大体は反射する。要確認)</li>
+<li>光沢 　(グレアとも呼ぶ。反射あり。作業には不向き。反射のため暗い映像に不向き。画像を美しく見せる効果がある。)</li>
+</ol>
+<h3 id="%E3%83%91%E3%83%8D%E3%83%AB%E7%A8%AE%E5%88%A5">パネル種別</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"></th>
+<th style="text-align:center">IPS</th>
+<th style="text-align:center">VA</th>
+<th style="text-align:center">TN</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">視野角</td>
+<td style="text-align:center">◎</td>
+<td style="text-align:center">○</td>
+<td style="text-align:center">×</td>
+</tr>
+<tr>
+<td style="text-align:center">応答速度</td>
+<td style="text-align:center">×</td>
+<td style="text-align:center">○</td>
+<td style="text-align:center">◎</td>
+</tr>
+<tr>
+<td style="text-align:center">色再現</td>
+<td style="text-align:center">◎</td>
+<td style="text-align:center">○</td>
+<td style="text-align:center">×</td>
+</tr>
+<tr>
+<td style="text-align:center">コントラスト比</td>
+<td style="text-align:center">○</td>
+<td style="text-align:center">◎</td>
+<td style="text-align:center">△</td>
+</tr>
+</tbody>
+</table>
+<p>※ 応答速度 - 残像。小さいほど良い<br>
+※ 視野角 - 角度による画面の見やすさ。広いほどあらゆる向きから見られる</p>
+<p>こう見るとTNパネル無能すぎるけど、実は安い価格で応答速度稼げて消費電力も少ない良い子<br>
+<strong>参考</strong><br>
+<a href="http://www.iodata.jp/product/lcd/info/ads.htm">IOデータ - パネル別比較表</a></p>
+<h3 id="%E3%82%A4%E3%83%B3%E3%83%81%E6%95%B0">インチ数</h3>
+<ul>
+<li>40〜<br>
+4分割PBPするなら必須。でかい。映画だけならこっちが良いけど。</li>
+<li>30〜<br>
+物によっては2分割PBP ができる。そこそこでかい。ゲームもするならこれくらいがいいかも。34とか？</li>
+<li>～30<br>
+30インチ以下のサイズは文字サイズの関係で見づらい可能性がある？ｇｇって</li>
+</ul>
+<h2 id="%E8%BF%BD%E5%8A%A0%E6%80%A7%E8%83%BD">追加性能</h2>
+<h3 id="hdr-%E3%83%8F%E3%82%A4%E3%83%80%E3%82%A4%E3%83%8A%E3%83%9F%E3%83%83%E3%82%AF%E3%83%AC%E3%83%B3%E3%82%B8">HDR (ハイダイナミックレンジ)</h3>
+<p><a href="https://www.eizo.co.jp/eizolibrary/color_management/hdr/index.html">EIZO - よくわかる、HDR徹底解説！ HDRとは</a></p>
+<h4 id="hdr10%E3%81%A8%E3%81%AF">HDR10とは</h4>
+<ol>
+<li>Ultra HD Blu-rayで採用されているHDR規格。</li>
+<li>nit数はこれを採用しているBlu-rayによって変わる。<br>
+10,000nitが最大。</li>
+<li><strong>映像側が採用している規格</strong>のため、これに対応しているからといってそのモニタのnit数がすごいわけではない。モニターはモニターで個別に確認する必要がある。</li>
+</ol>
+<ul>
+<li>HDR10+<br>
+HDR10の上位互換みたいなもの。たぶん</li>
+<li>Dolby Vision<br>
+こちらもHDR10より上位のHDR規格。HDR+の敵かと言うとそうでもないらしい？<br>
+<a href="https://www.phileweb.com/news/d-av/201801/15/43069.html">「HDR10+」と「ドルビービジョン」</a></li>
+</ul>
+<p>参考： <a href="https://www.4gamer.net/games/999/G999902/20171212022/">4gamer - HDR10とDisplayHDR</a></p>
+<h4 id="%E8%BC%9D%E5%BA%A6%E3%81%A8%E3%81%AF">輝度とは</h4>
+<p>これがHDRの要みたいなもの（？）</p>
+<ul>
+<li>単位はnit。cd/m2(カンデラ／平方メートル)はだいたいnitと同じ意味の別単位。<br>
+映像側の対応数を表現するときはnitで、モニター/テレビ側の対応数を表現するときはcd/m2が使われているのをよく見かける。気がする。</li>
+<li>標準輝度</li>
+<li>ピーク輝度/最大輝度
+<ul>
+<li>
+<p>画面の一部だけを発光させた最大輝度</p>
+</li>
+<li>
+<p>高ければ高いほうが良い。<strong>モニター側がピーク輝度1000cd/m2程度には対応していないと、HDRの恩恵を完璧には受けられないとも。</strong><br>
+300cd/m2程度しかないモニターならHDRはオマケくらいに思っていた方が良いかも。</p>
+<blockquote>
+<p>実は、各社がうたう「HDRテレビ」とは、「HDR10の入力信号に対応しているテレビ」のこと。現在HDRテレビが持つ実際のピーク輝度に明確な基準はなく、HDR10の信号を入力して表示できれば、HDRテレビと名乗れる。</p>
+</blockquote>
+<p>出典：<a href="https://style.nikkei.com/article/DGXMZO05144960S6A720C1000000">日経トレンディ - HDRテレビは本当に高画質？　現状は機種間で大差</a></p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="displayhdr-4006001000%E3%81%A8%E3%81%AF">DisplayHDR 400/600/1000とは</h4>
+<ul>
+<li>
+<p>HDR10、HDR10+、DolbyVisionとは違い、<strong>モニタ側の対応nit数を策定した規格。</strong> お尻についている数値=対応nit数となる</p>
+</li>
+<li>
+<p>モニターの場合は1000nitもあれば高級モデル。300～がよくあるタイプ。</p>
+</li>
+<li>
+<p>つまりモニターはどれくらいのnit数があればいいんだってばよ</p>
+<blockquote>
+<p>現在のHDRの業界スタンダードである「HDR10」は、最大10,000nitsの輝度情報を扱っている。コンシューマー向けの薄型テレビでコンテンツ制作者の意図した映像を再現しようとするなら、薄型テレビの実際の表示性能でピーク1,000nits以上の実力を持つことが理想とされている。</p>
+</blockquote>
+<p>出典： <a href="https://kakakumag.com/av-kaden/?id=11718">2018年に急速な拡大が見込まれるHDRの最新拡張規格「HDR10+」とは？</a></p>
+</li>
+<li>
+<p>液晶テレビはまだしも、モニターで1000nit対応を探すのはだいぶ選択肢が限られる。ついでに高い。</p>
+</li>
+<li>
+<p>でもカンデラが高すぎるモニターは眩しくて見づらい、300cd/m2くらいがベスト。みたいな話も聞く。どうすればええんや。</p>
+</li>
+</ul>
+<h3 id="4k%E3%82%84hdr%E3%81%AE%E9%AD%85%E5%8A%9B%E3%82%92%E5%BC%95%E3%81%8D%E5%87%BA%E3%81%99%E6%9D%A1%E4%BB%B6">4KやHDRの魅力を引き出す条件</h3>
+<p><strong>直下型LEDで部分駆動のバックライト</strong>であること<br>
+参考： <a href="https://trendy.nikkeibp.co.jp/article/column/20150629/1065402/?P=3">日経トレンディ - バックライトは「直下型」「部分駆動」がベスト</a></p>
+<h4 id="led%E3%83%90%E3%83%83%E3%82%AF%E3%83%A9%E3%82%A4%E3%83%88%E3%81%AE%EF%BC%92%E7%A8%AE">LEDバックライトの２種</h4>
+<ul>
+<li>直下型とは<br>
+パネルの全面にLEDを配置しているということ。</li>
+<li>エッジ型とは
+パネル下部のみや上下のみなど、部分的にLEDを配置しているタイプ。そのため、LEDが配置されていない中央部などの明るさが不足しがち。<br>
+液晶テレビはともかく、モニター類のLEDバックライトの大半はこっちだと思って良いと思う。</li>
+</ul>
+<h4 id="%E9%83%A8%E5%88%86%E9%A7%86%E5%8B%95%E3%83%AD%E3%83%BC%E3%82%AB%E3%83%AB%E3%83%87%E3%82%A3%E3%83%9F%E3%83%B3%E3%82%B0%E3%81%A8%E3%81%AF">部分駆動(ローカルディミング)とは</h4>
+<ul>
+<li>部分駆動とかエリア駆動とかローカルディミングとかエリア制御とか多くの異名を持つ（？）どれが本名よ</li>
+<li>必要なとこの明るさのみ調節するすごいやつ。</li>
+<li>エリア分割数が多いほど細かく明るさを調整できるらしい。<br>
+このエリア分割が低かったりエッジ型のエリア駆動だったりすると以下のような弊害があるらしい？<br>
+<a href="https://securavita.net/philips-436m6vbpab/">Secura Vita - ローカルディミング（バックライトの分割駆動）の弊害</a><br>
+※ ただ直下型エリア駆動である程度分割数が多くても暗いシーンでライトが目立っちゃうのは仕方ないところがありそう。</li>
+</ul>
+<h2 id="%E4%BB%96%E4%BD%99%E8%A3%95%E3%81%8C%E3%81%82%E3%81%A3%E3%81%9F%E3%82%89%E6%B0%97%E3%81%AB%E3%81%97%E3%81%9F%E3%81%84%E6%A9%9F%E8%83%BD">他余裕があったら気にしたい機能</h2>
+<h3 id="%E7%94%BB%E9%9D%A2%E5%88%86%E5%89%B2">画面分割</h3>
+<ul>
+<li>PBP(ピクチャーバイピクチャー)
+<ul>
+<li>画面分割(縦横に割って４分割とか)</li>
+<li>画面分割(縦に割って２分割とか)</li>
+</ul>
+</li>
+<li>PIP(ピクチャーインピクチャー)</li>
+<li>POP(ピクチャーアウトピクチャー)<br>
+<a href="http://www.iodata.jp/product/lcd/wide/lcd-m4k281xb/sp.htm">IOデータ - PIPとPOP</a><br>
+<a href="http://bbs.kakaku.com/bbs/0085X111287/SortID=3850418/">クチコミ.com いまいち使い勝手悪そう</a></li>
+<li>物理的に複数モニターにする</li>
+</ul>
+<h3 id="%E3%83%95%E3%83%AA%E3%83%83%E3%82%AB%E3%83%BC%E3%83%95%E3%83%AA%E3%83%BC--%E3%83%95%E3%83%AA%E3%83%83%E3%82%AB%E3%83%BC%E3%82%BB%E3%83%BC%E3%83%95">フリッカーフリー / フリッカーセーフ</h3>
+<p>画面のチラつきを抑える。目に優しい。<br>
+両者別物？<br>
+フリッカーレスってなんだ。</p>
+<h3 id="g-sync--freesync">G-SYNC / FreeSync</h3>
+<h3 id="usb-type-c%E2%80%8E">USB Type-C‎</h3>
+<h2 id="%E6%B6%B2%E6%99%B6%E3%83%86%E3%83%AC%E3%83%93%E3%81%AF%E9%81%B8%E6%8A%9E%E8%82%A2%E3%81%AB%E5%85%A5%E3%82%8B%E3%81%AE%E3%81%8B">液晶テレビは選択肢に入るのか？</h2>
+<h4 id="%E6%B6%B2%E6%99%B6%E3%83%86%E3%83%AC%E3%83%934k-uhd%E3%81%AE%E3%83%A1%E3%83%AA%E3%83%83%E3%83%88">液晶テレビ(4K UHD)のメリット</h4>
+<ul>
+<li>おそらく基本グレア加工である(スペック表にすら載っていない事が多いがテレビでノングレアは多分さほどないと思う)</li>
+<li>IPSパネルを使っているものが多い</li>
+<li>バックライトLEDが直下型エリア駆動の物が多い(ただし分割数の記載があるものはほぼない)</li>
+<li>地味にPBP機能のついた商品が多い</li>
+</ul>
+<h4 id="%E3%83%87%E3%83%A1%E3%83%AA%E3%83%83%E3%83%88">デメリット</h4>
+<ul>
+<li>スペックを確認しても分からないことが多い(表面加工、ピーク輝度、パネルの種類など)<br>
+もしかしたらパンフとか取説とか見たら載ってるかも？</li>
+<li>40インチ以上のものしかない。でかい</li>
+<li>高い。<br>
+IPSパネルを使ってるからなのかなんなのか、4Kモニターに比べると高い気がする。でかいインチしかないからそう思うだけかな？</li>
+<li>倍速駆動の罠<br>
+倍速駆動(通常60Hz)とかあったら、通常時は60Hzだけど倍速駆動使用時は120Hzとかでフレーム間を補完する機能がついている。<br>
+この機能、最低でも1フレームは遅延する。らしい。<br>
+これがオンオフ切り替えられるものなら問題ないが、そうでない場合は強制的に常に遅延と闘うことになるため要注意。<br>
+<a href="https://www.4gamer.net/games/999/G999902/20170912110/">4gamer -「倍速駆動」の話。</a></li>
+</ul>
+<h2 id="%E5%80%8B%E4%BA%BA%E7%9A%84%E3%81%AB%E6%AC%B2%E3%81%97%E3%81%84%E3%82%B9%E3%83%9A%E3%83%83%E3%82%AF">個人的に欲しいスペック</h2>
+<ul>
+<li>基本性能最低条件を満たすこと</li>
+<li>インチ数 : 32～34くらい<br>
+映像美重視系ゲームを4Kモニターでやることを考えると40インチはでかすぎる</li>
+<li>画面 : 購入予定インチ数を小さめにしたため、PBP4はなくてもいいや。PBP2とPIPはあればラッキー</li>
+<li>パネル : IPS or VA<br>
+映像美を考えるとIPSがいいが、VAでも可。コントラストは捨てる</li>
+<li>表面加工 : <s>グレア</s> → ノングレア<br>
+<s>映像美重視のため？再確認したい。作業用にべつに欲しくなったら安いノングレアをもう一枚買ってトリプルディスプレイすればよい。</s><br>
+→ 4Kモニターでグレアパネル探すのしんどすぎる。少なすぎ<br>
+<a href="http://kakaku.com/prdcompare/prdcompare.aspx?pd_cmpkey=K0001013343_K0001083423_K0001045870_K0000981872&amp;pd_ctg=0085&amp;spec=101_1-1-2-3-4-5_2-1-2-3-4-5-6-7-8-9-10-11-12-13-14-15-16-17-18,102_3-1-2-3-4-5-6-7-8-9_4-1-2-3-4-5-6-7-8-9-10-11-12-13-14-15-16-17,104_6-1-2-3-4,103_5-1-2-3-4">候補モニター比較</a></li>
+</ul>
+<ol>
+<li>
+<p>理想 <a href="https://www.asus.com/jp/Monitors/PA32UC-K/specifications/">ASUS PA32UC-K</a></p>
+</li>
+<li>
+<p>現実 <a href="https://acerjapan.com/monitor/4kwqhd/et2/ET322QKwmiipx#spec_area_wrap">Acer ET322QKwmiipx</a><br>
+VAパネル。輝度は300らしいが標準かピークかは不明。<br>
+スペック表の通りHDMI 2.0 x 2（HDCP2.2対応）/ DisplayPort 1.2対応。DP1.2かぁ…<br>
+フリッカーレス機能搭載。フリッカーレスってなんだ。<br>
+4万円ちょっとと現実の中でも一番現実的なお値段。<br>
+保証：本体は3年、パネル・バックライトユニットは1年</p>
+</li>
+<li>
+<p>現実 <a href="http://www.benq.co.jp/product/monitor/ew3270u/specifications/">BenQ EW3270U</a><br>
+VAパネル。輝度は300らしいが標準かピークかは不明。
+スペック表の通りHDMI 2.0 x2 / Display Port 1.4 対応。<br>
+LEDについての記載なし。この<a href="http://blog.livedoor.jp/wisteriear/archives/1070972025.html">記事</a>曰く、エリア駆動非対応っぽい。エッジ型直下型かは不明。<br>
+フリッカーフリー搭載。<br>
+安い。5万ちょっとくらい。<br>
+保証：本体は3年、パネル・バックライトユニットは1年</p>
+</li>
+<li>
+<p>現実 <a href="https://www.lg.com/jp/monitor/lg-32UD99-W">LG 32UD99-W</a><br>
+IPSパネル。LGの4KHDR機はIPS率高めで大変ありがたい。<br>
+ピーク輝度は書いてない。標準輝度350。<br>
+スペック表に表記は無いが、レビューによればHDMI2.0、DP1.4対応っぽい。<br>
+LEDについての記載なし。コントラストが他に比べて低め。応答速度はIPSにしてはよい。フリッカーセーフ搭載。<br>
+10万近くする。IPSだからなのか？<br>
+保証：本体、パネル・バックライトは3年、キャリブレーターは1年</p>
+</li>
+</ol>
+
+</body>
+</html>
