@@ -31,6 +31,8 @@
   購入当時は49インチの有機ELがどこからも発売されてなかったので液晶一択だったんですけど、今は49インチ有機ELも普通に売ってるのでたくさん悩んでください。  
   私も多分次買うときは死ぬほど悩みます。
 
+### ツイッターで残してた感想
+
 #### 喜びの声・悲しみの声偏  
 * 普通のテレビはスッポン  
   <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">テレビにネトフリとかアマプラHuluなんかが標準搭載されている強みを最近ようやく理解した。というか実感させられた？あれに慣れると普通のテレビがスッポンに見える</p>&mdash; mimizuk (@mimimizuk) <a href="https://twitter.com/mimimizuk/status/1100427563589980160?ref_src=twsrc%5Etfw">February 26, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
