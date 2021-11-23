@@ -73,6 +73,8 @@
 
 こう見るとTNパネル無能すぎるけど、実は安価で応答速度稼げて消費電力も少ないっていうメリットもある。    
 
+**参考**：[IOデータ - パネル別比較表](http://www.iodata.jp/product/lcd/info/ads.htm)
+
 ### 液晶パネルのバックライトについて  
 液晶なら直下型LEDで部分駆動のバックライトがベター  
 * 参考１： [日経トレンディ - バックライトは「直下型」「部分駆動」がベスト](https://trendy.nikkeibp.co.jp/article/column/20150629/1065402/?P=3)  
@@ -126,9 +128,6 @@ HDMI(テレビと周辺機器を繋ぐ接続端子のこと)の数や性能が�
 **参考**     
 [PCWatch - DisplayPort 1.4](https://pc.watch.impress.co.jp/docs/news/746343.html)
 [GIZMOOD - HDMI](https://www.gizmodo.jp/2018/06/you_are_probably_using_the_wrong_hdmi_cord.html)
-
-**参考**    
-[IOデータ - パネル別比較表](http://www.iodata.jp/product/lcd/info/ads.htm)
 
 ### インチ数
 4Kだとそれなりのインチ数でも視聴適正距離が1.5mとか2mだったりするので六畳間とかでも40～のサイズが買える。
