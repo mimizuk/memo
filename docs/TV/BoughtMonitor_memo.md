@@ -1,9 +1,13 @@
-# 4Kテレビと仲間たち
-結局買ったもの(買ったのは2018年12月　書いているのは2021年11月)
+# 4Kテレビを買った話
+作成日：2021/11/23  
+
+いろいろしらべて最終的に買ったものの話  
+(買ったのは2018年12月　書いているのは2021年11月)  
 [買うときに調べたこと](./Monitor_memo.md)
 
-## テレビ：KJ-49X9000F  
-  https://www.sony.jp/bravia/products/KJ-X9000F/  
+---
+
+## テレビ：[KJ-49X9000F](https://www.sony.jp/bravia/products/KJ-X9000F/)    
 
   本命
   
@@ -30,10 +34,9 @@
 #### 困りごとと解決策
   あといろいろ困った時もあったけどなんだかんだ解決したのでその辺も気が向いたら書いておきたい。
 
-## ホームシアターシステム：HT-CT380  
-  https://www.sony.jp/home-theater/products/HT-CT380/  
+## ホームシアターシステム：[HT-CT380](https://www.sony.jp/home-theater/products/HT-CT380/)    
 
-  映画見るならスピーカーもちょっとはこだわっていいんじゃない？って勢いで買った  
+  映画見るならスピーカーもちょっとはこだわっていいんじゃない？って勢いで買った。  
   サブウーファーついててこのお値段はお得かなって…
 
   ただ4KHDR対応のパススルー接続が出来ないのでテレビやその他周辺機器との接続をすっきりさせるためにもワンワンク上のを買っても良かったかなってちょっと後悔してる。  
@@ -42,8 +45,7 @@
   Bluetooth接続できるのでたまにスマホから飛ばして音楽だけ聞いてたりする。  
   当たり前だけど音が良い
 
-## 4KUHDブルーレイディスクプレーヤー：UBP-X700  
-  https://www.sony.jp/bd-player/products/UBP-X700/  
+## 4KUHDブルーレイディスクプレーヤー：[UBP-X700](https://www.sony.jp/bd-player/products/UBP-X700/)  
 
   本命その２
   ディスクの映画を見るのが目的だったので  
@@ -52,11 +54,10 @@
 
 ## PS4Pro  
 たまたま同時期に買っただけかも。    
-でも4KHDRのスパイダーマンは超綺麗だったぞ。  
-4KHDRはゲームプレイにもオススメ！
+でも4KHDRのスパイダーマンは超綺麗だった。  
+4KHDRテレビはゲームプレイにもオススメ！
 
-## テレビ台：朝日木材加工 テレビ台 ちょい足しラック 49型 幅110cm
-https://www.amazon.co.jp/gp/product/B07FZYMTZ3/ref=ppx_yo_dt_b_asin_title_o00_s01?ie=UTF8&th=1
+## テレビ台：[朝日木材加工 テレビ台 ちょい足しラック 49型 幅110cm](https://www.amazon.co.jp/gp/product/B07FZYMTZ3/ref=ppx_yo_dt_b_asin_title_o00_s01?ie=UTF8&th=1)
 
 周辺機器でもなんでもないけど地味に買うまで時間がかかって困ってたのでメモ
 
@@ -69,12 +70,11 @@ https://www.amazon.co.jp/gp/product/B07FZYMTZ3/ref=ppx_yo_dt_b_asin_title_o00_s0
 このメーカーは画面サイズごとにそれっぽい高さと幅でバリエーション豊富に取り扱いあるのでオススメです。  
 木製なのでテレビ付属の転倒防止ベルトも取り付けられました。  
 
-## ブルーレイディスクレコーダー：BDZ-FBW1100  
-  https://www.sony.jp/bd/products/BDZ-FBW2100_1100/  
+## ブルーレイディスクレコーダー：[BDZ-FBW1100](https://www.sony.jp/bd/products/BDZ-FBW2100_1100/)    
   最近(2021年)追加購入しました。  
 
-  ここ1年くらいでコズミックフロントっていうNHK番組にドはまりしまして、  
-  https://twitter.com/nhk_space/status/1457196219051225088  
+  ここ1年くらいで[コズミックフロント](https://twitter.com/nhk_space/status/1457196219051225088)っていうNHK番組にドはまりしまして、  
+  <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">こんにちは！<br><br>（新）<a href="https://twitter.com/hashtag/%E3%82%B3%E3%82%BA%E3%83%9F%E3%83%83%E3%82%AF%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88?src=hash&amp;ref_src=twsrc%5Etfw">#コズミックフロント</a> 絶賛放送中！<br><br>さらにパワーアップして <a href="https://twitter.com/hashtag/%E5%AE%87%E5%AE%99?src=hash&amp;ref_src=twsrc%5Etfw">#宇宙</a> <a href="https://twitter.com/hashtag/%E5%9C%B0%E7%90%83?src=hash&amp;ref_src=twsrc%5Etfw">#地球</a> <a href="https://twitter.com/hashtag/%E7%94%9F%E5%91%BD?src=hash&amp;ref_src=twsrc%5Etfw">#生命</a> の壮大な物語をお伝えしていきます！<br>プロモーション動画 <a href="https://twitter.com/hashtag/%E5%AE%87%E5%AE%99%E7%B7%A8?src=hash&amp;ref_src=twsrc%5Etfw">#宇宙編</a> をご覧ください！<a href="https://twitter.com/hashtag/%E8%90%A9%E5%8E%9F%E8%81%96%E4%BA%BA?src=hash&amp;ref_src=twsrc%5Etfw">#萩原聖人</a> <a href="https://twitter.com/hashtag/%E5%9C%B0%E7%90%83?src=hash&amp;ref_src=twsrc%5Etfw">#地球</a> <a href="https://twitter.com/hashtag/%E3%82%AD%E3%83%AA%E3%83%88%E3%83%AA%E3%82%BB%E3%82%AB%E3%82%A4?src=hash&amp;ref_src=twsrc%5Etfw">#キリトリセカイ</a> <a href="https://t.co/pLbB8Bi5kr">pic.twitter.com/pLbB8Bi5kr</a></p>&mdash; コズミックフロント (@nhk_space) <a href="https://twitter.com/nhk_space/status/1457196219051225088?ref_src=twsrc%5Etfw">November 7, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
   じつはこれ4K放送もされてるんですよね。  
   宇宙番組というジャンル上やっぱ画が綺麗なことも多くて、  
@@ -90,7 +90,6 @@ https://www.amazon.co.jp/gp/product/B07FZYMTZ3/ref=ppx_yo_dt_b_asin_title_o00_s0
 高い買い物するときは実店舗でお店の人に聞きながら買うのが一番だよ。
 
 必要な性能がはっきりしていると話も進めやすいので下調べも大事けど、やっぱ自分で調べ切るのは限界あるので。  
-特に駅前の大型店舗とか強そうな店員さん多いのでオススメ。
+特に都会駅前の大型店舗とか強そうな店員さん多いのでオススメ。
 
 ついでに言うとテレビはメーカーごとに発色違うので現地で見ないことには何もわからん。
- 
