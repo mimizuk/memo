@@ -77,7 +77,8 @@
 
 こう見るとTNパネル無能すぎるけど、実は安価で応答速度稼げて消費電力も少ないっていうメリットもある。    
 
-**参考**：[IOデータ - パネル別比較表](http://www.iodata.jp/product/lcd/info/ads.htm)
+**参考**：[IOデータ - パネル別比較表](http://www.iodata.jp/product/lcd/info/ads.htm)  
+**参考**：[応答速度ってなに？GtG・MPRTの違いとかオーバーシュートとか](https://abolution.com/response-speed-gtg-mprt)
 
 ### 液晶パネルのバックライト  
 液晶なら直下型LEDで部分駆動のバックライトがベター  
